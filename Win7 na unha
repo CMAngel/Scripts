@@ -1,0 +1,29 @@
+wget http://ufpr.dl.sourceforge.net/project/ms-sys/ms-sys%20development/2.5.3/ms-sys-2.5.3.tar.gz
+
+tar xvzf ms-sys-2.5.3.tar.gz
+
+cd ms-sys-2.5.3
+
+make
+
+sudo make install
+
+su -
+
+export PATH=$PATH:/usr/local/bin
+
+sudo ms-sys -7 /dev/sd* 
+
+sudo mkdir -p /mnt/usb
+
+sudo mount /dev/sd*1 /mnt/usb
+
+sudo mkdir -p /mnt/iso
+
+sudo mount -o loop /path/to/.iso /mnt/iso
+
+sudo cp -av /mnt/iso/* /mnt/usb/
+
+sudo umount /mnt/usb
+
+OBS: O pendrive tem que estra formatado em Ntfs e com a flag boot

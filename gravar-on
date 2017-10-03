@@ -1,0 +1,4 @@
+zenity --info --text "Clique em 'OK' para iniciar a gravação. Parar: killall ffmpeg."
+videodesk
+sleep 2
+ffmpeg -f x11grab -s 1366x768 -i :0.0 -r 15 -vcodec libx264  ~/screencast-`date +%d-%m-%Y_%H:%M:%S`.mp4

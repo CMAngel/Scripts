@@ -1,0 +1,23 @@
+background yes
+use_xft
+xftalpha 1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+minimum_size 10
+maximum_width 500
+alignment top_left
+gap_x 50
+gap_y 5
+no_buffers yes
+
+TEXT
+${font MonoSpace:bold:size=9}${color #a43fa8}Memoria$color:$mem / $memmax ${color #a43fa8}Time$color:${time %b, %a %d %I:%M} ${color #a43fa8}Kernel$color: $kernel$font
